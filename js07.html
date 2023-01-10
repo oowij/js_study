@@ -1,0 +1,80 @@
+<script>
+  //   // number
+  //   const num = 1.123456789;
+  //   console.log(num.toFixed(2));
+  //   // 반올림할 때 사용 --> 1.12출력 됨
+  //   console.log(`${num} toFixed : ${num.toFixed()}`); // 1.123456789 toFixed : 1
+  //   console.log(`${num} toString() : ${num.toFixed()}`); // 1.123456789 toString() : 1
+  //   console.log(typeof num); // number
+  //   console.log(typeof num.toString()); // string
+
+  // string
+  const str1 = new String("ABcd");
+  const str = "ABcd"; // 문자(char)의 배열
+  console.log(`${str} charAt("A") : ${str.charAt("0")}`); // ABcd charAt("A") : A
+  console.log(`${str} concat("e") : ${str.concat("e")}`); // ABcd concat("e") : ABcde
+  console.log(`${str} endsWith("D") : ${str.endsWith("D")}`); // ABcd endsWith("D") : false (문자열 뒤에 "D"가 없어서 false)
+  console.log(`${str} endsWith("A") : ${str.startsWith("A")}`); // ABcd endsWith("A") : true (문자열 앞에 "A"가 있어서 true)
+  console.log(`${str} endsWith("cd") : ${str.includes("cd")}`); // ABcd endsWith("cd") : true
+  // if(str.indexof("d") != -1)
+  console.log(`${str} endsWith("d") : ${str.indexOf("d")}`); // ABcd endsWith("d") : 3 or 대문자 "D"를 넣으면 ABcd endsWith("d") : -1
+  console.log(`${str} length : ${str.length}`); // length는 함수가 아니라 필드, ABcd length : 4
+  console.log(`${str} padStart(8) : ${str.padStart(8)}`); // ABcd length :     ABcd , 굴자 포함해서 8글자
+  console.log(`${str} repeat(5) : ${str.repeat(5)}`); // ABcd repeat(5) : ABcdABcdABcdABcdABcd
+  console.log(`${str} replace("cd", "") : ${str.replace("cd", "")}`); // ABcd replace("cd", "") : AB , 문자를 바꿀때 보다 지울 때
+  console.log(`${str} slice(1, 3) : ${str.slice(1, 3)}`); // ABcd slice() : Bc
+  console.log(`${str} split("") : ${str.split("")}`); // ABcd split("") : A,B,c,d
+  //   console.log("나는 학교에 갑니다.".split(" ")); // (3) ['나는', '학교에', '갑니다.']
+  console.log(`${str} substring(1) : ${str.substring(1)}`); // ABcd substring(1) : Bcd
+  console.log(`${str} toLowerCase() : ${str.toLowerCase()}`); // ABcd toLowerCase() : abcd
+  console.log(`${str} toUpperCase() : ${str.toUpperCase()}`); // ABcd toUpperCase() : ABCD
+  console.log(`${str} trim() : ${"  abcd  ".trim()}`); // ABcd trim() : abcd
+
+  // array
+  const arr = ["A", "B", "c", "d"];
+  console.log(`${arr} concat("e") : ${arr.concat("e")}`); // A,B,c,d concat("e") : A,B,c,d,e
+  console.log(`${arr} concat("[g]") : ${arr.concat(["g"])}`); // A,B,c,d concat("[g}") : A,B,c,d,g
+  //   console.log(`${arr} copyWithin(0, 1, 2) : ${arr.copyWithin(0, 1, 2)}`); // A,B,c,d copyWithin(0, 1, 2) : B,B,c,d
+  //   console.log(`${arr} fill("a") : ${arr.fill("a")}`); // B,B,c,d fill("a") : a,a,a,a
+  console.log(
+    [
+      ["a", "b"],
+      ["c", "d"],
+    ].flat()
+  ); // (4) ['a', 'b', 'c', 'd']
+  //   console.log(`${arr} pop() : ${arr.pop()}`); // A,B,c,d pop() : d
+  //   console.log(arr); //(3) ['A', 'B', 'c']
+  console.log(`${arr} push("g") : ${arr.push("g")}`); // A,B,c,d concat("[g]") : A,B,c,d,g , 원본을 수정하는 것
+  console.log(arr); //(5) ['A', 'B', 'c', 'd', Array(1)]
+  console.log(`${arr} join("") : ${arr.join([" "])}`); // A,B,c,d,g join("") : A B c d g
+  console.log(`${arr} reverse() : ${arr.reverse()}`); // A,B,c,d,g reverse() : g,d,c,B,A
+
+  // forEach, filter, map, reduce, every, Find, some
+  // forEach -> 반복작업
+  const callbackFn = (value) => {
+    console.log(arr);
+  };
+
+  arr.forEach(callbackFn);
+  arr.forEach((value) => console.log(value));
+
+  // filter -> 조건 필터링해서 배열 반환
+  const predicate1 = (value, index, array) => {
+    return value.charCodeAt(0) > 97;
+  };
+
+  console.log(arr.filter(predicate1));
+  console.log(arr.filter((value) => value == "g"));
+
+  // map -> 배열의 요소를 변환
+
+  console.log(arr.map((value) => value));
+  // reduce -> 요소 합치기
+  // every -> 모든 요소가 조건에 부합하는지
+  // some -> 하나의 요소라도 조건에 부합하는지
+  // Find -> 조건에 부합하는 요소 찾기
+
+  // obj
+  // Math
+  // Date
+</script>
