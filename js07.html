@@ -1,12 +1,12 @@
 <script>
-  //   // number
-  //   const num = 1.123456789;
-  //   console.log(num.toFixed(2));
-  //   // 반올림할 때 사용 --> 1.12출력 됨
-  //   console.log(`${num} toFixed : ${num.toFixed()}`); // 1.123456789 toFixed : 1
-  //   console.log(`${num} toString() : ${num.toFixed()}`); // 1.123456789 toString() : 1
-  //   console.log(typeof num); // number
-  //   console.log(typeof num.toString()); // string
+  // number
+  const num = 1.123456789;
+  console.log(num.toFixed(2));
+  // 반올림할 때 사용 --> 1.12출력 됨
+  console.log(`${num} toFixed : ${num.toFixed()}`); // 1.123456789 toFixed : 1
+  console.log(`${num} toString() : ${num.toFixed()}`); // 1.123456789 toString() : 1
+  console.log(typeof num); // number
+  console.log(typeof num.toString()); // string
 
   // string
   const str1 = new String("ABcd");
@@ -55,13 +55,14 @@
     console.log(arr);
   };
 
-  arr.forEach(callbackFn);
-  arr.forEach((value) => console.log(value));
+  //   arr.forEach(callbackFn);
+  //   arr.forEach((value) => console.log(value));
+  //  앞에 식 없어짐..
 
-  // filter -> 조건 필터링해서 배열 반환
-  const predicate1 = (value, index, array) => {
-    return value.charCodeAt(0) > 97;
-  };
+  // filter -> 조건 필터링해서 배열 반환 / true만 반환
+  const solution = (array, height) =>
+    array.filter((value) => value > height).length;
+  // [189,303,343].length 3개 출력되는 거
 
   console.log(arr.filter(predicate1));
   console.log(arr.filter((value) => value == "g"));
