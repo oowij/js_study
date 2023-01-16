@@ -1,0 +1,44 @@
+<script>
+  //async awit
+  //1. async 업는 함수에서 promise
+  //   const noAsyncfunc = () => {
+  //     const pro1 = new Promise((resolve, reject) => {
+  //       setTimeout(() => {
+  //         resolve("pro1 완료");
+  //       }, 2000);
+  //     });
+  //     const pro2 = new Promise((resolve, reject) => {
+  //       setTimeout(() => {
+  //         resolve("pro2 완료");
+  //       }, 2000);
+  //     });
+  //     // then 안의 함수를 콜백함수라고 한다.
+  //     pro1.then((Response) => {
+  //       console.log(Response);
+  //     });
+  //     pro2.then((Response) => {
+  //       console.log(Response);
+  //     });
+  //   };
+  //   noAsyncfunc();
+
+  //2. awit 있는 함수에서 promise
+  const asyncFunc = async () => {
+    const pro1 = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve("pro1 완료");
+      }, 2000);
+    });
+    const pro2 = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve("pro2 완료");
+      }, 1000);
+    });
+
+    const res1 = await pro1;
+    console.log(res1);
+    const res2 = await pro1;
+    console.log(res2);
+  };
+  asyncFunc();
+</script>

@@ -1,0 +1,59 @@
+<script>
+  // break, continue (while문에서)
+  // while, for 안에서 break가 선언되면 반복문이 종료된다.
+  const breakFunc = () => {
+    let count = 0;
+    while (count < 100) {
+      console.log(`${count} break테스트`);
+      if (count > 10) {
+        break;
+      }
+      count = count + 1;
+    }
+    console.log(`break빠져나옴`);
+  };
+  breakFunc();
+
+  // while, for 문에서 continue를 선언되면 반복문이 종료된다
+  // array.filter -> 워래 있던 배열에서 필터링할때
+  // [1, 2, 3] 에서 [] 반배열로 pusg 할 때
+  // 조건이 홀수 인것만
+  const continueFunc = () => {
+    let count = 0;
+    while (count < 100) {
+      count = count + 1;
+      if (count == 98) {
+        continue;
+      }
+      console.log(`${count} continue테스트`);
+    }
+    console.log(`continue 빠져나옴`);
+  };
+  continueFunc();
+
+  // return
+  // 함수안에서 return이 선언되면 함수가 종료
+  // 계산이 완료되서 더 이상 함함수 내의 코드를 실행할 필용가 없을 때
+  // 매개변수가 ```번 스트링이면 0을 리턴하고
+  const strFun = (ttr) => {
+    if (str.lenhth == 0) {
+      return 0;
+    }
+    return str.split("");
+  };
+  console.log(strFun(""));
+  console.log(strFun("가나다"));
+
+  const returnFunc = () => {
+    let count = 0;
+    while (count < 100) {
+      console.log(`${count} return테스트`);
+      if (count > 10) {
+        return;
+      }
+      count = count + 1;
+    }
+    console.log(`return 빠져나옴`);
+  };
+  returnFunc();
+</script>
