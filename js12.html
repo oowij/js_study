@@ -35,10 +35,13 @@
       }, 1000);
     });
 
-    const res1 = await pro1;
+    // await 사용시
+    // promise 결과는 순서대로 작동된다.
+    const res1 = await pro1; //2초 뒤에 풀림
     console.log(res1);
-    const res2 = await pro1;
+    const res2 = await pro1; // 이미 풀려있음
     console.log(res2);
   };
+  // async 함수는 promise를 리턴한다.
   asyncFunc();
 </script>
