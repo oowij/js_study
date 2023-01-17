@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas id=""></canvas>
+  </body>
+  <script>
+    // 두더지
+    class Mole {
+      constructor(game, index, x, y) {
+        this.idx = index;
+        this.x = x;
+        this.y = y;
+        this.attacked = false;
+        setTimeout(() => {
+          // TODO 두더지 사라짐
+          if (!this.attacked) {
+            // TODO fail점수 상승
+          }
+        }, 1500);
+      }
+    }
+
+    // 두더지 게임
+    class MolGame {
+      constructor(canvas) {
+        this.gameWidth = 350;
+        this.gameHeight = 700;
+        this.gameLavel = 1;
+        this.genMole = 2;
+        this.moleArray = new Array(9).fill(null);
+        this.score = 0;
+        this.Fail = 0;
+        this.moleInterval = null;
+        this.renderInterval = null;
+
+        /** @type {HTMLCanvasElement} */
+        this.canvas = canvas;
+        this.canvas.width = this.gameWidth;
+        this.canvas.height = this.gameHeight;
+        /** @type {CanvasRenderingContext2D} */
+        this.ctx = this.canvas.getContext("2d");
+
+        this.bgImage = new Image();
+        this.bgImage.src = "./asser/img/bg.jpg";
+        // 공격이펙트이미지
+        this.boomImage = new Image();
+        this.boomImage.src = "./assse/img/boom.jpg";
+
+        // TODO 공격
+        // TODO 두더지생성
+        // TODO 하면그리기
+      }
+
+      render() {
+        //TODO 화면 클리어
+        //TODO 배경 그리기
+        //TODO 두더지 그리기
+        //TODO 정수 / 실패
+        //TODO 정수 / 실패
+      }
+
+      over() {
+        //TODO Interval 멈추기
+      }
+    }
+  </script>
+</html>

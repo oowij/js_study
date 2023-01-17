@@ -35,7 +35,12 @@
     // 글쓰기
     const fellfont = "30px Arial";
     context.fillStyle = "black";
-    context.fillText("안녕하세요", 100, 30);
-    context.fillText("안녕하세요", 100, 30);
+    context.fillText("안녕하세요", 300, 50);
+
+    const image = new Image();
+    image.src = "./asset/img/mole.png";
+    image.onload = () => {
+      context.drawImage(image, 100, 100, 50, 50);
+    };
   </script>
 </html>
