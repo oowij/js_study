@@ -31,9 +31,10 @@
     // 두더지 게임
     class MoleGame {
       constructor(canvas) {
+        // 게임 설정 데이터
         this.gameWidth = 350;
         this.gameHeight = 700;
-        this.gameLavel = 2;
+        this.gameLavel = 1;
         this.genMole = 2;
         this.moleArray = new Array(9).fill(null);
         this.score = 0;
@@ -41,16 +42,20 @@
         this.moleInterval = null;
         this.renderInterval = null;
 
+        // 캔버스
         /** @type {HTMLCanvasElement} */
         this.canvas = canvas;
         this.canvas.width = this.gameWidth;
         this.canvas.height = this.gameHeight;
+
+        // 컨텍스트
         /** @type {CanvasRenderingContext2D} */
         this.ctx = this.canvas.getContext("2d");
-        //두더지 화면
+
+        // 배경 이미지
         this.bgImage = new Image();
         this.bgImage.src = "./asset/img/bg.jpg";
-        //두더지
+        // 두더지 이미지
         this.moleImage = new Image();
         this.moleImage.src = "./asset/img/mole_r.png";
         // 공격이펙트이미지
